@@ -2,24 +2,24 @@
 #Author: Henry K. Dambanemuya, University of Notre Dame
 
 import tweepy
- 
+
 # Consumer keys and access tokens, used for OAuth
-consumer_key = 'bk4l0l0rHdiZMJWZW9pNZQVUq'
-consumer_secret = 'EK1kYIqFTBYsrFGWqTUB0OEKg9ZZk7igc3CYiaMTzK19V8qJPS'
-access_token = '219557776-l5XshDUG0VKq0uJm9R83oHYr2v7PHnkem1IK9wFl'
-access_token_secret = 'DH0USra44ykbGlfj3DaS8FWTjRWuatKxiSI9Te0Ni1amM'
- 
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
+
 # OAuth process, using the keys and tokens
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
- 
+
 # Creation of the actual interface, using authentication
 api = tweepy.API(auth)
 
 # Create a list of user profile ID's
 userList = [34373370, 26257166, 12579252]
- 
-# Task 1: Collecting user's profile information 
+
+# Task 1: Collecting user's profile information
 def task1():
     # Create text document to store twitter profiles
     userProfilesFile = open('userProfiles.txt', 'w', encoding='utf-8')
@@ -36,7 +36,7 @@ def task1():
         userProfilesFile.write ("User URL: " + str(user.url) + "\n"*2)
     userProfilesFile.close()
 
-# Task 2: Collecting user's social network information 
+# Task 2: Collecting user's social network information
 def task2():
     # Create text document and download lists of screen names of the user's friends and followers lists and print results to text file
     friendListFile = open('friendList.txt', 'w', encoding='utf-8')
@@ -54,7 +54,7 @@ def task2():
         friendListFile.write ("\n")
     friendListFile.close()
 
-# Task 3a: Collecting tweets that contain one of the following two keywords: [Indiana, weather] 
+# Task 3a: Collecting tweets that contain one of the following two keywords: [Indiana, weather]
 def task3a():
     # Create text document and download tweets that contain one of the following two keywords: [Indiana, weather] and print results to text file
     keywordSearchFile = open('keywordSearch.txt', 'w', encoding='utf-8')
