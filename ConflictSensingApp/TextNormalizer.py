@@ -42,7 +42,7 @@ def preprocess(s, lowercase=True): #what does lowercase=True do?
     return tokens
 
 def normalize_text():
-    with open('data.json', 'r') as f:
+    with open('Tweets.json', 'r') as f:
         for line in f:
             try:
                 tweet = json.loads(line) # load it as Python dict

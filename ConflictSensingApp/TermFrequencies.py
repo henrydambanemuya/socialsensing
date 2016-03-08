@@ -46,7 +46,7 @@ def preprocess(s, lowercase=True): #what does "lowercase=True" do?
     return tokens
 
 def summarize():
-    fname = 'data.json'
+    fname = 'Tweets.json'
     with open(fname, 'r') as f:
         count_all = Counter()
         count_hash = Counter()
