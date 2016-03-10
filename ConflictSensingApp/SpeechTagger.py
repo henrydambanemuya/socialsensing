@@ -21,7 +21,6 @@ def createInput():
                     tweet = json.loads(line)
                     text = tweet['text']
                     o.write(' '.join(re.sub("(RT)|(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",text).split()))
-                    #o.write('\n')
                 except BaseException as e:
                     continue
 
